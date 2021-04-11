@@ -1,7 +1,7 @@
 from tkinter import *
 
-root = Tk()
-root.geometry('600x600')
+main = Tk()
+main.geometry('600x600')
 
 # Matrix where are stored numbers.
 storedNumbers = []
@@ -137,7 +137,7 @@ for i in range(1, 10):
     storedNumbers += [[0, 0, 0, 0, 0, 0, 0, 0, 0]]
 for i in range(0, 9):
     for j in range(0, 9):
-        storedNumbers[i][j] = StringVar(root)
+        storedNumbers[i][j] = StringVar(main)
 
-app = Play(root)
-root.mainloop()
+app = Play(main)
+main.mainloop()
