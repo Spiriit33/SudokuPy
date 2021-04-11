@@ -15,7 +15,7 @@ def all_to_zero():
                 storedNumbers[i][j].set(0)
 
 
-# Check the Validity of savedNumbers
+# Check the Validity of storedNumbers
 def is_valid(i, j, e):
     for x in range(9):
         if storedNumbers[i][x].get() == str(e):
@@ -84,7 +84,7 @@ def solve_input():
     SolveSudoku()
 
 
-# Sell all to null
+# Set all to null
 def clear_all():
     for i in range(9):
         for j in range(9):
@@ -114,6 +114,7 @@ class Play:
                 else:
                     color = 'white'
 
+                # define front design and action
                 self.__table[i][j] = Entry(master, width=4, font=font, bg=color, cursor='arrow', borderwidth=0,
                                            highlightcolor='orange', highlightthickness=1, highlightbackground='black',
                                            textvar=storedNumbers[i][j])
@@ -126,6 +127,7 @@ class Play:
         menu = Menu(master)
         master.config(menu=menu)
 
+        #Menu details
         file = Menu(menu)
         menu.add_cascade(label='Fichier', menu=file)
         file.add_command(label='Quitter', command=master.quit)
